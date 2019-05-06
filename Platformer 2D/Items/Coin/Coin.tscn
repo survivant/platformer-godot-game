@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Items/Coin/Scripts/Coin.gd" type="Script" id=1]
+[ext_resource path="res://Items/Coin/coingold.png" type="Texture" id=2]
+[ext_resource path="res://Items/Coin/coin_gold_icon.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "delete"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1.92036, 3.65246 )
+
+[node name="Coin" type="Node2D"]
+script = ExtResource( 1 )
+coin_texture = ExtResource( 2 )
+
+[node name="spr" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 6
+frame = 1
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/delete = SubResource( 1 )
+anims/mov = SubResource( 2 )
+
+[node name="area_col" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0.592486, -0.118497 )
+
+[node name="col" type="CollisionShape2D" parent="area_col"]
+position = Vector2( 0, 2.12949 )
+shape = SubResource( 3 )
+
+[node name="particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+one_shot = true
+initial_velocity = 20.0
+initial_velocity_random = 1.0
+angular_velocity = 50.0
+linear_accel = 50.0
+scale_amount = 1.1
+color = Color( 1, 0.890196, 0.509804, 1 )
+
+[node name="spr_icon" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 21.875, 5.875, 5.375, 8.25 )
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="body_entered" from="area_col" to="." method="_on_area_col_body_entered"]
