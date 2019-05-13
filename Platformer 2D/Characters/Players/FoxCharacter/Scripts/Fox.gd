@@ -4,17 +4,12 @@ signal finished
 
 var velocity = Vector2();
 var distance = Vector2();
-var speed = 26.50;
+var speed = 40.50;
 var gravity = 450;
-var jump_speed = 150;
+var jump_speed = 160;
 var direction = Vector2();
-var sword = true;
+var sword = false;
 
-func _ready():
-	distance = Vector2(0,0)
-	speed = 26.50
-	gravity = 450
-	jump_speed = 150
 
 func _physics_process(delta):
 	apply_gravity(true,delta)
@@ -46,7 +41,3 @@ func apply_gravity(value,delta):
 		return move_info;
 	else:
 		return;
-
-func _on_Sword_body_entered(body):
-	if body.is_in_group("Enemies"):
-		body._damage();

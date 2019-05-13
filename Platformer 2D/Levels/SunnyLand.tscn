@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Levels/Tilemaps/SunnyLandTiles/SunnyTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Graphics/Sunny Land/back.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Graphics/Sunny Land/middle.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Graphics/Sunny Land/house.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Players/FoxCharacter/FoxCharacter.tscn" type="PackedScene" id=5]
+
+[node name="SunnyLand" type="Node2D"]
+
+[node name="TileMaps" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="TileMaps"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 589820, 0, 0, 655356, 0, 0, 720892, 0, 0, 786428, 0, 0, 720903, 3, 0, 720904, 3, 0, 720905, 5, 0, 851965, 0, 0, 851966, 0, 2, 851967, 0, 2, 786432, 0, 2, 786433, 0, 2, 786434, 0, 2, 786435, 0, 2, 786436, 0, 4, 786439, 7, 0, 786442, 0, 0, 786443, 0, 2, 786444, 0, 2, 786445, 0, 2, 786446, 0, 2, 786447, 0, 2, 786448, 0, 2, 786449, 0, 2, 786450, 0, 2, 786451, 0, 2, 786452, 0, 2, 786453, 0, 4, 917501, 0, 131072, 917502, 0, 131074, 917503, 0, 131074, 851968, 0, 131074, 851969, 0, 131074, 851970, 0, 131074, 851971, 0, 131074, 851972, 0, 131076, 851978, 0, 131072, 851979, 0, 131074, 851980, 0, 131074, 851981, 0, 131074, 851982, 0, 131074, 851983, 0, 131074, 851984, 0, 131074, 851985, 0, 131074, 851986, 0, 131074, 851987, 0, 131074, 851988, 0, 131074, 851989, 0, 131076, 983037, 0, 262144, 983038, 0, 262146, 983039, 0, 262146, 917504, 0, 262146, 917505, 0, 262146, 917506, 0, 262146, 917507, 0, 262146, 917508, 0, 262148, 917514, 0, 262144, 917515, 0, 262146, 917516, 0, 262146, 917517, 0, 262146, 917518, 0, 262146, 917519, 0, 262146, 917520, 0, 262146, 917521, 0, 262146, 917522, 0, 262146, 917523, 0, 262146, 917524, 0, 262146, 917525, 0, 262148 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 151.661, 119.936 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 120.96, 288.361 )
+texture = ExtResource( 3 )
+
+[node name="house" type="Sprite" parent="."]
+position = Vector2( 244.88, 138.042 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="FoxCharacter" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12.0621, 150.81 )

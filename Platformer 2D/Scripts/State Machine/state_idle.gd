@@ -9,7 +9,7 @@ func handle_input(event):
 			owner.velocity.y = 0
 			emit_signal("finished","Jump")
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if owner.sword and Input.is_action_just_pressed("ui_accept"):
 		emit_signal("finished","Attack")
 	
 	return event
