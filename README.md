@@ -19,10 +19,10 @@ All the code of this repository is considering Free Software, you can download, 
 
 ... But: the images and external Game Assets are part of other licenses, related with Itch.io and OpenGameArt. Some are Free for personal and comercial proyects.
 
-You **can find Tutorials** for build each mechanic of the repository, (here)["http://indielibre.com/"]
+You **can find Tutorials** for build each mechanic of the repository, here: http://indielibre.com/
 
 ### Dependencies
 
-**Godot 3.1** or older. (Download: )[https://godotengine.org/download]
+**Godot 3.1** or older. Download: https://godotengine.org/download
 
 [Indie Libre](https://indielibre.com/), **César León**.
