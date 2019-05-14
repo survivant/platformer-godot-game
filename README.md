@@ -1,22 +1,28 @@
 # Platformer Godot Game
-!("http://indielibre.com/wp-content/uploads/2019/05/DeepinScreenshot_Seleccionar-%C3%A1rea_20190513145435-700x384.png")
+![img](http://indielibre.com/wp-content/uploads/2019/05/DeepinScreenshot_Seleccionar-%C3%A1rea_20190513145435-700x384.png)
+
 This is a compilation of mechanics for Platformer Games, developvers on Godot Engine.
-For **more information** of the repository: [look here(http://indielibre.com/platformer-game/)]
 
-Indie Libre, César León:
+_For **more information** of the repository:_ [look here](http://indielibre.com/platformer-game/)
 
-Español:
+![img](http://indielibre.com/wp-content/uploads/2019/05/DeepinScreenshot_Seleccionar-%C3%A1rea_20190513150853-700x518.png)
 
-Este componente para la creación de diferentes mecánicas para juegos de Plataformas esta sujeto a una licencia libre. 
-Los proyectos que hagan uso del código no están obligados a mencionar a su creador.
+This project tries to follow good practices for programming within Godot.
 
-El contenido donde se explica sobre el funcionamiento de este recurso y cómo se arreglaría para funcionar en 
-cualquier proyecto de plataformas, todavía esta en desarrollo.
+To guarantee the understanding of all the users, the GDScript style guide is followed: [Godot Docs](https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_styleguide.html)
 
-English:
+![Desert](http://indielibre.com/wp-content/uploads/2019/05/DeepinScreenshot_Seleccionar-%C3%A1rea_20190513145819-700x485.png)
 
-This component for the creation of different mechanics for games of Platforms is subject to a free license.
-Projects that use the code are not required to mention their creator.
+## License GPL-v3
 
-The content where is explained about the operation of this resource and how it would be arranged to work in
-any platform project, is still in development.
+All the code of this repository is considering Free Software, you can download, learn, distribute and more. 
+
+... But: the images and external Game Assets are part of other licenses, related with Itch.io and OpenGameArt. Some are Free for personal and comercial proyects.
+
+You **can find Tutorials** for build each mechanic of the repository, (here)["http://indielibre.com/"]
+
+### Dependencies
+
+**Godot 3.1** or older. (Download: )[https://godotengine.org/download]
+
+[Indie Libre](https://indielibre.com/), **César León**.
