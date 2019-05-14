@@ -1,5 +1,5 @@
-# platformer-godot-game
-Compilation of reusable mechanics in other platform games projects - Recopilación de mecánicas re-utilizables en otros proyectos de juegos de plataformas.
+# Platformer Godot Game
+This is a compilation of mechanics for Platformer Games, developvers on Godot Engine.
 
 Indie Libre, César León:
 
