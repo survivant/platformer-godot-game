@@ -1,5 +1,7 @@
 # Platformer Godot Game
+!("http://indielibre.com/wp-content/uploads/2019/05/DeepinScreenshot_Seleccionar-%C3%A1rea_20190513145435-700x384.png")
 This is a compilation of mechanics for Platformer Games, developvers on Godot Engine.
+For **more information** of the repository: [look here(http://indielibre.com/platformer-game/)]
 
 Indie Libre, César León:
 
