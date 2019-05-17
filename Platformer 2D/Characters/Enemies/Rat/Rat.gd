@@ -7,15 +7,11 @@ var velocity = Vector2()
 var distance = Vector2()
 var speed = 26.50
 var gravity = 450
-var jump_speed = 150
 var direction = Vector2(1,0)
 var d
 
 func _ready():
-	distance = Vector2(0,0)
-	speed = 26.50
-	gravity = 450
-	jump_speed = 150
+	return speed or distance
 
 func _physics_process(delta):
 	_apply_gravity(true,delta);
@@ -37,18 +33,18 @@ func _apply_gravity(value,delta):
 		
 		if !test_move(d,Vector2(5,2)):
 			direction.x = -1;
-			$icon.flip_h = true;
+			$icon.flip_h = false;
 		elif !test_move(d,Vector2(-5,2)):
 			direction.x = 1;
-			$icon.flip_h = false;
+			$icon.flip_h = true;
 		
 		if is_on_wall():
 			if direction.x == -1:
 				direction.x = 1;
-				$icon.flip_h = false;
+				$icon.flip_h = true;
 			else:
 				direction.x = -1;
-				$icon.flip_h = true;
+				$icon.flip_h = false;
 		
 		if is_on_floor():
 			velocity.y = 0;
@@ -56,9 +52,8 @@ func _apply_gravity(value,delta):
 	else:
 		return;
 
-func _damage():
-	direction.x = 0
-	get_node("AnimationPlayer").play("Died");
+func dead():
+	get_node("anim").play("Died");
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Died":

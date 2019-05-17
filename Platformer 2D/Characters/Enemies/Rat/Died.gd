@@ -1,7 +1,6 @@
 extends "res://Scripts/State Machine/state.gd"
 
 func enter():
-	print("ee")
 	owner.get_node("AnimationPlayer").play("Died")
 
 func handle_input(event):
@@ -9,7 +8,6 @@ func handle_input(event):
 
 func update(delta):
 	move(owner.speed, owner.direction, delta)
-	
 
 func move(speed, direction,delta):
 	owner.velocity.x = direction.x * speed

@@ -28,13 +28,17 @@ func apply_gravity(value,delta):
 			pass
 		
 		if get_slide_count() != 0:
-			var body = get_slide_collision(get_slide_count()-1)
+			var body = get_slide_collision(get_slide_count()-1);
 			
 			if body.normal == Vector2(0,1):
-				velocity.y = 0
+				velocity.y = 0;
+			
+			if body.normal == Vector2(0,-1) and body.collider.is_in_group("Enemies"):
+				body.collider.dead();
+				emit_signal("finished","Jump");
 		
 		if is_on_floor():
-			velocity.y = 0
+			velocity.y = 0;
 			if Input.is_action_just_pressed("ui_up"):
 				emit_signal("finished","Jump");
 		
