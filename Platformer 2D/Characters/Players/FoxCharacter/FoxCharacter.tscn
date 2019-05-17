@@ -201,7 +201,7 @@ texture = ExtResource( 7 )
 hframes = 2
 
 [node name="col" type="CollisionShape2D" parent="."]
-position = Vector2( -0.717957, 5.74367 )
+position = Vector2( 1.25643, 6.09162 )
 shape = SubResource( 1 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]

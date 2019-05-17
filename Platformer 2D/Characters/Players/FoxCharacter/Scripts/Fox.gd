@@ -4,12 +4,11 @@ signal finished
 
 var velocity = Vector2();
 var distance = Vector2();
-var speed = 40.50;
+var speed = 45.50;
 var gravity = 450;
-var jump_speed = 160;
+var jump_speed = 180;
 var direction = Vector2();
 var sword = false;
-
 
 func _physics_process(delta):
 	apply_gravity(true,delta)
@@ -37,7 +36,8 @@ func apply_gravity(value,delta):
 		if is_on_floor():
 			velocity.y = 0
 			if Input.is_action_just_pressed("ui_up"):
-				emit_signal("finished","Jump")
+				emit_signal("finished","Jump");
+		
 		return move_info;
 	else:
 		return;
